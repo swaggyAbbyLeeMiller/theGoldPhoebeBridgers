@@ -9,7 +9,7 @@ public class theGold {
 
     private static final Lock lock = new ReentrantLock();
 
-    public static void animateText(String text, double delay) {
+    public static void text(String text, double delay) {
         lock.lock();
         try {
             for (char c : text.toCharArray()) {
@@ -31,7 +31,7 @@ public class theGold {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-        animateText(lyric, speed);
+        text(lyric, speed);
     }
 
     public static void singSong() {
